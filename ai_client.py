@@ -21,7 +21,7 @@ def get_client():
 
 def generate_text(prompt: str, *, json_mode: bool = False) -> str:
     """Generate text using the configured Gemini model."""
-    model = os.getenv("GEMINI_MODEL", "gemini-2.5-flash").strip()
+    model = os.getenv("GEMINI_MODEL", "gemini-3.8-flash").strip()
     config = types.GenerateContentConfig(
         temperature=0.4,
         response_mime_type="application/json" if json_mode else "text/plain",
